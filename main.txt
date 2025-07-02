@@ -1,0 +1,50 @@
+// initial configuration
+git config --global user.name "Enter your name"
+git config --global user.email enteryouremail@id.in
+git config --global core.editor "code --wait" (set "VS Code" as the default editor instead of "vim")
+git config - e (see the "config" file)
+
+// git help
+git config --help (full documentation about "config")
+git config -h (short summary about "config")
+
+// initialize the git directory in your project folder
+git init (will create a .git subdirectory)
+
+// inlcude a gitignore file in your project folder
+touch .gitignore (create the .gitignore file)
+code .gitignore (opens the .gitignore file in VS Code to edit)
+
+// add files to the staging area
+git add file-name (e.g. - git add hello.txt)
+git add . (add all files)
+git add *.txt (add all .txt files)
+git ls-files (to check all the files currently in staging area)
+git rm --cached file-name (removes the file name only from staging area)
+
+// check status
+git status (full status)
+git status -s (short status)
+
+// commit a change
+git commit -m "your commit message"
+git commit (will open the default text editor to enter long commit message if required)
+
+// check difference between current version of files and those in staging area
+git diff --staged
+git config --global diff.tool vscode (sets vscode as the visual difference tool)
+git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE" (tells VS Code how to start)
+
+// remove files from the staging area
+git restore . (remove all the files from the staging area/undo all local changes)
+git restore --stages file-name (remove a specific file from the staging area)
+git restore --staged *.txt (removes all .txt files from the staging area)
+
+// restoring files to its previous version
+git restore --source=HEAD~k file-name (k = no. of steps we want to move back)
+
+// common CLI commands
+ls -> check files in the directory except hidden files
+ls -a -> check all files including hidden ones
+touch file-name -> create a new file
+rm file-name -> remove a file
