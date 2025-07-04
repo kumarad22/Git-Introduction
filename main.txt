@@ -1,3 +1,19 @@
+How to push local repository to GitHub ??
+-> First setup SSH connection and save a SSH key on your GitHub account
+-> Create a new repository on your GitHub
+-> Initialize Git repository on your local project directory
+-> Commit the changes as required and push it to your GitHub directory
+-> Follow the following commands
+
+git init
+git add README.md (to avoid future conflicts)
+git commit -m "enter your commit message here"
+git branch -m main (if default GitHub branch name is "main")
+git remote add origin https://github.com/user-id/repository-name.git
+git push -u origin main
+
+=====================================================================================================
+
 // initial configuration
 git config --global user.name "Enter your name"
 git config --global user.email enteryouremail@id.in
